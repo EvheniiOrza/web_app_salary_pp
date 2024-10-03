@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Details</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .employee-card { width: 400px; margin: 0 auto; }
+        h2 { color: #333; }
+        .salary-stats { background-color: #f9f9f9; padding: 10px; }
+        .total-amount { background-color: #ffcc00; padding: 15px; text-align: center; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="employee-card">
+        <h2>{{ employee.first_name }} {{ employee.last_name }}</h2>
+        <p>Position: {{ employee.position.position_title }}</p>
+        <p>Hire Date: {{ employee.hire_date }}</p>
+        <div class="salary-stats">
+            <p>Base Salary: {{ salary.base_salary }} грн</p>
+            <p>Overtime Pay: {{ salary.overtime_pay }} грн</p>
+            <p>Bonuses: {{ salary.bonuses }} грн</p>
+        </div>
+        <div class="total-amount">
+            Total Salary: {{ total_salary }} грн
+        </div>
+    </div>
+</body>
+</html>
